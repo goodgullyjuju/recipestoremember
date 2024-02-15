@@ -5,7 +5,7 @@ function ContentView() {
   return (
     <div>
       <header>
-        <h1>Welcome to Recipe Store Member</h1>
+        <h1>Welcome to Recipes to Remember</h1>
         <p>Discover your next favorite meal today!</p>
       </header>
       <nav>
@@ -39,7 +39,7 @@ function ContentView() {
         {/* For demonstration, the search functionality isn't implemented */}
       </aside>
       <footer>
-        <p>&copy; {new Date().getFullYear()} Recipe Store Member. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()}Recipes to Remember. All rights reserved.</p>
       </footer>
     </div>
   );
