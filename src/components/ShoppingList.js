@@ -10,4 +10,4 @@ function ShoppingList({ ingredients }) {
       </ul>
     );
   }
-  
+  Export default ShoppingList; 
