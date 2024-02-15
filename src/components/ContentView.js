@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../ContentView.css'; // Correct the quotes here
-
+import ‘../ContentView.css'; // Make sure to create this CSS file
 
 function ContentView() {
   return (
@@ -45,3 +44,7 @@ function ContentView() {
 }
 
 export default ContentView;
+
+
+
+
