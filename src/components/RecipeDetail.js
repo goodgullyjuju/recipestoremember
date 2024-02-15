@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import sampleRecipes from './sampleRecipes'; // Adjust the import path as necessary
+import sampleRecipes from '../sampleRecipes'; // This correctly references sampleRecipes.js from one level up
+
 
 function RecipeDetail() {
   const { id } = useParams();
