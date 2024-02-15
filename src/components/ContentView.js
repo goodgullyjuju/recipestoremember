@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ‘../ContentView.css'; // Make sure to create this CSS file
+import '../ContentView.css'; // Correct the quotes here
+
 
 function ContentView() {
   return (
