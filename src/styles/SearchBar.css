@@ -1,0 +1,39 @@
+/* Style the form */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the input field */
+  .search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px 0 0 4px; /* Rounded left corners */
+    outline: none; /* Removes the default focus outline */
+    width: 60%;
+  }
+  
+  /* Style the input field when it receives focus */
+  .search-input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Style the search button */
+  .search-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0; /* Rounded right corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Change the background color of the button on hover */
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Note the change here from 'Switch' to 'Routes'
-import ContentView from './components/ContentView';
+import ContentView from './ContentView';
 // Remove this line if RecipeList is not used in App.js
 // import RecipeList from './components/RecipeList';
-import Favorites from './components/Favorites';
-import ShoppingList from './components/ShoppingList';
-import RecipeDetail from './components/RecipeDetail';
+import Favorites from './Favorites';
+import ShoppingList from './ShoppingList';
+import RecipeDetail from './RecipeDetail';
 function App() {
   return (
     <Router>
