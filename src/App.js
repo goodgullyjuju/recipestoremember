@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import ContentView from './components/ContentView'; // Imported ContentView
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Note the change here from 'Switch' to 'Routes'
+import ContentView from './components/ContentView';
 import RecipeList from './components/RecipeList';
 import RecipeDetail from './components/RecipeDetail';
 import Favorites from './components/Favorites';
@@ -19,14 +19,14 @@ function App() {
           </ul>
         </nav>
       
-        {/* Switch between routes */}
-        <Switch>
-          <Route path="/" exact component={ContentView} /> {/* Updated to use ContentView */}
-          <Route path="/recipe/:id" component={RecipeDetail} />
-          <Route path="/favorites" component={Favorites} />
-          <Route path="/shopping-list" component={ShoppingList} />
+        {/* Update to Routes from Switch for react-router-dom v6 */}
+        <Routes>
+          <Route path="/" element={<ContentView />} exact />
+          <Route path="/recipe/:id" element={<RecipeDetail />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/shopping-list" element={<ShoppingList />} />
           {/* Additional routes as needed */}
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );
