@@ -1,7 +1,7 @@
 const sampleRecipes = [
   {
     id: 1,
-    name: "Mom's Pizza",
+    name: "PepperoniPizza",
     description: "A homemade pizza with a secret family recipe.",
     ingredients: [
       "1 1/2 cups Sourdough Starter",
@@ -38,12 +38,12 @@ const sampleRecipes = [
       "Remove pizza from oven and pat with a paper towel to remove extra grease from pepperonis.",
       "Cool, Cut, and Enjoy!"
     ],
-    imageUrl: '/images/MomsPizza.jpeg', // Added missing comma here
+    imageUrl: '/images/PepperoniPizza.jpeg', // Added missing comma here
     videoUrl: "https://www.youtube.com/embed/t0H_0d7QBs8" // Converted to embed format
   },
   {
     id: 2,
-    name: "Mom's Chocolate Chip Cookies",
+    name: "ChocolateChipCookies",
     description: "Delicious chocolate cookies with pecans.",
     ingredients: [
       "1 1/2 sticks butter (room temperature)",
@@ -70,7 +70,7 @@ const sampleRecipes = [
       "Cool and serve.",
       "Makes 30-36 cookies.",
     ],
-    imageUrl: '/images/MomsChocolateChipCookies.jpeg', // Added missing comma here
+    imageUrl: '/images/ChocolateChipCookies.jpeg', // Added missing comma here
     videoUrl: "https://www.youtube.com/embed/4WieSJK5q7w" // Converted to embed format
   }
 ];
