@@ -37,8 +37,8 @@ const sampleRecipes = [
           "Broil pizza until the toppings get bubbly and the cheeses and pepperoni start browning.",
           "Remove pizza from oven and pat with a paper towel to remove extra grease from pepperonis.",
           "Cool, Cut, and Enjoy!"
-        ],
-        imageUrl: '/images/moms-pizza.jpeg', // Correct path assuming image is in public/images
+        ]
+        imageUrl: '/images/MomsPizza.jpeg',
         videoUrl: "https://www.youtube.com/embed/t0H_0d7QBs8" // Converted to embed format
   },
       {
@@ -69,8 +69,8 @@ const sampleRecipes = [
           "Bake for 8-10 minutes or until golden brown.",
           "Cool and serve.",
           "Makes 30-36 cookies.",
-        ],
-        imageUrl: '/images/moms-chocolate-chip-cookies.jpeg', // Correct path assuming image is in public/images
+        ]
+        imageUrl: '/images/MomsChocolateChipCookies.jpeg',
         videoUrl: "https://www.youtube.com/embed/4WieSJK5q7w" // Converted to embed format
   }
 ];

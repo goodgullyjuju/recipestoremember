@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../ContentView.css'; // Corrected the quotation marks
-
-
 function ContentView() {
   return (
     <div className="content-view">
@@ -21,13 +19,15 @@ function ContentView() {
         <h2>Featured Recipes</h2>
         <div className="recipes-container">
           <article className="recipe">
-            <img src="/path/to/moms-pizza.jpeg" alt="Mom's Pizza" className="recipe-image"/>
+            {/* Update the path for Mom's Pizza image */}
+            <img src="/images/MomsPizza.jpeg" alt="Mom's Pizza" className="recipe-image"/>
             <h3>Mom's Pizza</h3>
             <p>A homemade pizza with a secret family recipe.</p>
             <Link to="/recipe/1">Read more</Link>
           </article>
           <article className="recipe">
-            <img src="/path/to/moms-chocolate-chip-cookies.jpeg" alt="Mom's Chocolate Chip Cookies" className="recipe-image"/>
+            {/* Update the path for Mom's Chocolate Chip Cookies image */}
+            <img src="/images/MomsChocolateChipCookies.jpeg" alt="Mom's Chocolate Chip Cookies" className="recipe-image"/>
             <h3>Mom's Chocolate Chip Cookies</h3>
             <p>Delicious chocolate cookies with pecans.</p>
             <Link to="/recipe/2">Read more</Link>
@@ -45,7 +45,3 @@ function ContentView() {
 }
 
 export default ContentView;
-
-
-
-
