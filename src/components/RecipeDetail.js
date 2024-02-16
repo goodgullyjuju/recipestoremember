@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import sampleRecipes from '../sampleRecipes'; // This correctly references sampleRecipes.js from one level up
-
+import sampleRecipes from '../sampleRecipes'; // Correctly references sampleRecipes.js from one level up
 
 function RecipeDetail() {
   const { id } = useParams();
@@ -45,15 +44,14 @@ function RecipeDetail() {
         <div>
           <h3>Tutorial Video</h3>
           <iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/t0H_0d7QBs8"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
-
+            width="560"
+            height="315"
+            src={recipe.videoUrl} // Dynamically use the videoUrl property
+            title="YouTube video player"
+            style={{ border: 0 }} // Use inline styles to remove the border
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       )}
     </div>
