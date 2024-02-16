@@ -19,16 +19,16 @@ function ContentView() {
         <h2>Featured Recipes</h2>
         <div className="recipes-container">
           <article className="recipe">
-            {/* Update the path for PepperoniPizza image */}
-            <img src="/images/PepperoniPizza.jpeg" alt="PepperoniPizza" className="recipe-image"/>
-            <h3>Pepperoni Pizza</h3>
+            {/* Update the path for MomsPizza image */}
+            <img src="/images/MomsPizza.jpeg" alt="Moms Pizza" className="recipe-image"/>
+            <h3>Mom's Pizza</h3>
             <p>A homemade pizza with a secret family recipe.</p>
             <Link to="/recipe/1">Read more</Link>
           </article>
           <article className="recipe">
-            {/* Update the path for ChocolateChipCookies image */}
-            <img src="/images/ChocolateChipCookies.jpeg" alt="Chocolate Chip Cookies" className="recipe-image"/>
-            <h3>Chocolate Chip Cookies</h3>
+            {/* Update the path for MomsChocolateChipCookies image */}
+            <img src="/images/MomsChocolateChipCookies.jpeg" alt="Mom's Chocolate Chip Cookies" className="recipe-image"/>
+            <h3>Mom's Chocolate Chip Cookies</h3>
             <p>Delicious chocolate cookies with pecans.</p>
             <Link to="/recipe/2">Read more</Link>
           </article>
