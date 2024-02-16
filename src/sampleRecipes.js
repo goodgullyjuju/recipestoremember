@@ -1,7 +1,7 @@
 const sampleRecipes = [
   {
     id: 1,
-    name: "Mom's Pizza",
+    name: "MomsPizza",
     description: "A homemade pizza with a secret family recipe.",
     ingredients: [
       "1 1/2 cups Sourdough Starter",
@@ -43,7 +43,7 @@ const sampleRecipes = [
   },
   {
     id: 2,
-    name: "Mom's Chocolate Chip Cookies",
+    name: "MomsChocolateChipCookies",
     description: "Delicious chocolate cookies with pecans.",
     ingredients: [
       "1 1/2 sticks butter (room temperature)",
