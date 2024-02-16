@@ -38,7 +38,7 @@ const sampleRecipes = [
           "Remove pizza from oven and pat with a paper towel to remove extra grease from pepperonis.",
           "Cool, Cut, and Enjoy!"
         ],
-        imageUrl: '/images/moms-pizza.jpg',
+        imageUrl: '/images/moms-pizza.jpeg',
         videoUrl: "https://youtu.be/t0H_0d7QBs8"
       },
       {
@@ -70,7 +70,7 @@ const sampleRecipes = [
           "Cool and serve.",
           "Makes 30-36 cookies.",
         ],
-        imageUrl: '/images/moms-chocolate-chip-cookies.jpg',
+        imageUrl: '/images/moms-chocolate-chip-cookies.jpeg',
         videoUrl: "https://youtu.be/4WieSJK5q7w"
       }
     ];
