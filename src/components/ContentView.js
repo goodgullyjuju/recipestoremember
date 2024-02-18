@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../ContentView.css'; // Corrected the quotation marks
+import sampleRecipes from '../sampleRecipes'; // Ensure this path is correct
+import '../ContentView.css';
+
 function ContentView() {
   return (
     <div className="content-view">
@@ -18,21 +20,15 @@ function ContentView() {
       <section className="featured-recipes">
         <h2>Featured Recipes</h2>
         <div className="recipes-container">
-          <article className="recipe">
-            {/* Update the path for MomsPizza image */}
-            <img src={`${process.env.PUBLIC_URL}/images/MomsPizza.jpeg`} alt="Mom's Pizza" className="recipe-image"/>
-
-            <h3>Mom's Pizza</h3>
-            <p>A homemade pizza with a secret family recipe.</p>
-            <Link to="/recipe/1">Read more</Link>
-          </article>
-          <article className="recipe">
-            {/* Update the path for MomsChocolateChipCookies image */}
-            <img src={`${process.env.PUBLIC_URL}/images/MomsChocolateChipCookies.jpeg`} alt="Mom's Chocolate Chip Cookies" className="recipe-image"/>
-            <h3>Mom's Chocolate Chip Cookies</h3>
-            <p>Delicious chocolate cookies with pecans.</p>
-            <Link to="/recipe/2">Read more</Link>
-          </article>
+          {sampleRecipes.map((recipe, index) => (
+            <article className="recipe" key={index}>
+              {/* Update the image path to reflect PNG format */}
+              <img src={`${process.env.PUBLIC_URL}/images/${recipe.imageName}.png`} alt={recipe.name} className="recipe-image"/>
+              <h3>{recipe.name}</h3>
+              <p>{recipe.description}</p>
+              <Link to={`/recipe/${recipe.id}`}>Read more</Link>
+            </article>
+          ))}
         </div>
       </section>
       <aside className="search-section">
