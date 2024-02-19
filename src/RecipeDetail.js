@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import sampleRecipes from '../sampleRecipes'; // Ensure this path is correct based on your project structure
+import sampleRecipes from './sampleRecipes'; // Ensure this path is correct based on your project structure
 
 function RecipeDetail() {
   const { id } = useParams();

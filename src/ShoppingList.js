@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import sampleRecipes from '../sampleRecipes'; // Adjust the path as necessary
+import sampleRecipes from './sampleRecipes'; // Adjust the path as necessary
 
 function ShoppingList() {
   const [ingredientsList, setIngredientsList] = useState([]);

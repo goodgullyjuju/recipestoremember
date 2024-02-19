@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import sampleRecipes from '../sampleRecipes'; // Ensure this path is correct
+import sampleRecipes from './sampleRecipes'; // Ensure this path is correct
 
 function Favorites() {
   // Assuming you're storing favorite recipe IDs in local storage or state

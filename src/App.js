@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import ContentView from './components/ContentView';
-import Favorites from './components/Favorites';
-import ShoppingList from './components/ShoppingList';
-import RecipeDetail from './components/RecipeDetail';
+import ContentView from './ContentView';
+import Favorites from './Favorites';
+import ShoppingList from './ShoppingList';
+import RecipeDetail from './RecipeDetail';
 
 function App() {
   return (
