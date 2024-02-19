@@ -266,5 +266,6 @@ steps: [
  ],
 imageUrl: process.env.PUBLIC_URL + '/images/BakedSalmonDinner.png',
     videoUrl: "https://youtube.com/embed/hgOAWML--pQ", // Correct syntax
-  }
-];
+  }];
+
+  export default sampleRecipes;
