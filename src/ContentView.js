@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import sampleRecipes from './sampleRecipes'; // Ensure this path is correct
-import '../ContentView.css';
+import sampleRecipes from './sampleRecipes'; // Update if necessary
+import './ContentView.css'; // No change needed if CSS file moved with JS file
 
 function ContentView() {
   return (
