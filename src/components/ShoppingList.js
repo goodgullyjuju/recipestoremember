@@ -1,28 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import sampleRecipes from '../sampleRecipes'; // Adjust the path as necessary
 
-// Dummy selectedRecipes IDs for illustration
-// In a real app, this might come from app state or props
-const selectedRecipeIds = [1, 2]; // Assuming users have selected recipes with IDs 1 and 2
-
-function ShoppingList({ selectedRecipes }) {
+function ShoppingList() {
   const [ingredientsList, setIngredientsList] = useState([]);
 
   useEffect(() => {
-    // Assuming selectedRecipes is an array of recipe IDs
-    const aggregatedIngredients = selectedRecipes
-      .map((id) => sampleRecipes.find((recipe) => recipe.id === id)?.ingredients)
+    // Assuming we want to aggregate ingredients from all recipes in sampleRecipes
+    const aggregatedIngredients = sampleRecipes
+      .map((recipe) => recipe.ingredients)
       .flat()
       .reduce((acc, ingredient) => {
-        const { name, quantity, unit } = ingredient;
-        if (!acc[name]) {
-          acc[name] = { quantity: 0, unit };
+        // Assuming your ingredient object structure includes 'name', 'quantity', and 'unit'
+        const key = `${ingredient.name}-${ingredient.unit}`;
+        if (!acc[key]) {
+          acc[key] = { ...ingredient, quantity: 0 };
         }
-        acc[name].quantity += quantity;
+        acc[key].quantity += ingredient.quantity;
         return acc;
       }, {});
 
-    setIngredientsList(Object.entries(aggregatedIngredients).map(([name, { quantity, unit }]) => ({ name, quantity, unit })));
-  }, [selectedRecipes]);
+    setIngredientsList(Object.values(aggregatedIngredients));
+  }, []); // Empty dependency array means this effect runs once on mount
 
   return (
     <ul>
@@ -36,3 +34,4 @@ function ShoppingList({ selectedRecipes }) {
 }
 
 export default ShoppingList;
+
