@@ -38,7 +38,7 @@ const sampleRecipes = [
       "Remove pizza from oven and pat with a paper towel to remove extra grease from pepperonis.",
       "Cool, Cut, and Enjoy!"
     ],
-    imageUrl: process.env.PUBLIC_URL + '/images/MomsPizza.png', // Correct path
+    imageUrl: '/images/MomsPizza.png', // Correct path
     videoUrl: "https://www.youtube.com/embed/t0H_0d7QBs8" // Converted to embed format
   },
   {
@@ -70,7 +70,7 @@ const sampleRecipes = [
       "Cool and serve.",
       "Makes 30-36 cookies.",
     ],
-    imageUrl: process.env.PUBLIC_URL + '/images/MomsChocolateChipCookies.png', // Correct path
+    imageUrl:  '/images/MomsChocolateChipCookies.png', // Correct path
     videoUrl: "https://www.youtube.com/embed/4WieSJK5q7w" // Converted to embed format
   },
 {
@@ -104,7 +104,7 @@ steps: [
 	"Enjoy!",
     ],
 
- imageUrl: process.env.PUBLIC_URL + '/images/SoftPretzels.png',
+ imageUrl:'/images/SoftPretzels.png',
     videoUrl: "https://youtube.com/embed/ynRHkRIfuvw",
 },
   {
@@ -137,7 +137,7 @@ id: 4,
 	"Bake at 425 degrees for 18 minutes",
 	"Enjoy!",
 ],
- imageUrl: process.env.PUBLIC_URL + '/images/AsiagoBagels.png',
+ imageUrl: '/images/AsiagoBagels.png',
     videoUrl: "https://youtube.com/embed/GprxujdCIPg", // Removed extra colon
   },
   {
@@ -162,7 +162,7 @@ steps: [
 	"Place in Breville Bread Machine and select \"Crusty Loaf\", \"2 1/2 lb\",",
 	"Enjoy hot and fresh sourdough bread in about 3 hours and 40 minutes!",
 ],
-    imageUrl: process.env.PUBLIC_URL + '/images/CrustyLoaf.png',
+    imageUrl:  '/images/CrustyLoaf.png',
     videoUrl: "https://youtube.com/embed/-7O_Up-Wc84", // Correct syntax
   },
   {
@@ -200,7 +200,7 @@ steps: [
 	"Slide pizza onto cutting board and slice into 8 pieces",
 	"Enjoy!",
  ],
-    imageUrl: process.env.PUBLIC_URL + '/images/BurgerPizza.png',
+    imageUrl:  '/images/BurgerPizza.png',
     videoUrl: "https://youtube.com/embed/TcYXqwJLRFM", // Correct syntax
   },
   {
@@ -229,7 +229,7 @@ steps: [
 	"Return to low heat and stir all until velvety and smooth. The dip should be creamy and flow dripping from spoon.",
 	"Enjoy warm with soft pretzels or chips!",
  ],
- imageUrl: process.env.PUBLIC_URL + '/images/BeerCheeseDip.png',
+ imageUrl: '/images/BeerCheeseDip.png',
     videoUrl: "https://youtube.com/embed/2aNlXPpVTBs", // Correct syntax
 	
 },		
@@ -265,7 +265,7 @@ steps: [
 	"When water has evaporated from beans, remove cover and let green beans scorch just a little for color and flavor. Remove from heat and cover until ready to serve.",
 	"Enjoy!",
  ],
-imageUrl: process.env.PUBLIC_URL + '/images/BakedSalmonDinner.png',
+imageUrl:'/images/BakedSalmonDinner.png',
     videoUrl: "https://youtube.com/embed/hgOAWML--pQ", // Correct syntax
   }];
 

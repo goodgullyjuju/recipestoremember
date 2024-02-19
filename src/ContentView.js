@@ -20,15 +20,15 @@ function ContentView() {
       <section className="featured-recipes">
         <h2>Featured Recipes</h2>
         <div className="recipes-container">
-          {sampleRecipes.map((recipe, index) => (
-            <article className="recipe" key={index}>
-              {/* Update the image path to reflect PNG format */}
-              <img src={`${process.env.PUBLIC_URL}/images/${recipe.imageName}.png`} alt={recipe.name} className="recipe-image"/>
-              <h3>{recipe.name}</h3>
-              <p>{recipe.description}</p>
-              <Link to={`/recipe/${recipe.id}`}>Read more</Link>
-            </article>
-          ))}
+        {sampleRecipes.map((recipe, index) => (
+  <article className="recipe" key={index}>
+    <img src={recipe.imageUrl} alt={recipe.name} className="recipe-image"/>
+    <h3>{recipe.name}</h3>
+    <p>{recipe.description}</p>
+    <Link to={`/recipe/${recipe.id}`}>Read more</Link>
+  </article>
+))}
+
         </div>
       </section>
       <aside className="search-section">
