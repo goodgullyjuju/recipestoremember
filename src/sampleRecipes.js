@@ -42,6 +42,7 @@ const sampleRecipes = [
     videoUrl: "https://www.youtube.com/embed/t0H_0d7QBs8" // Converted to embed format
   },
   {
+	id: 2,
     name: "MomsChocolateChipCookies",
     description: "Delicious chocolate cookies with pecans. (Makes about 3 dozen cookies depending on individual size)",
     ingredients: [
