@@ -1,33 +1,35 @@
 import React, { useState, useEffect } from 'react';
-
-// Assuming sampleRecipes is globally available or imported
-const sampleRecipes = [
-  { id: 1, name: "Spaghetti Carbonara", description: "A classic Italian pasta dish..." },
-  { id: 2, name: "Chicken Tikka Masala", description: "A popular Indian curry dish..." },
-  // More recipes
-];
+import { Link } from 'react-router-dom';
+import sampleRecipes from '../sampleRecipes'; // Ensure this path is correct
 
 function Favorites() {
-  const [favoriteRecipes, setFavoriteRecipes] = useState([]);
+  // Assuming you're storing favorite recipe IDs in local storage or state
+  const [favoriteRecipeIds, setFavoriteRecipeIds] = useState([]);
 
   useEffect(() => {
-    const favoriteIds = JSON.parse(localStorage.getItem('favorites')) || [];
-    const favorites = sampleRecipes.filter(recipe => favoriteIds.includes(recipe.id));
-    setFavoriteRecipes(favorites);
+    // Load favorite recipe IDs from local storage or a global state
+    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    setFavoriteRecipeIds(storedFavorites);
   }, []);
+
+  const favoriteRecipes = sampleRecipes.filter(recipe => favoriteRecipeIds.includes(recipe.id));
 
   return (
     <div>
-      <h2>Favorites</h2>
-      <ul>
-        {favoriteRecipes.map(recipe => (
-          <li key={recipe.id}>
-            <h3>{recipe.name}</h3>
-            <p>{recipe.description}</p>
-            {/* Implement additional functionality as needed, e.g., remove from favorites */}
-          </li>
-        ))}
-      </ul>
+      <h2>My Favorite Recipes</h2>
+      {favoriteRecipes.length > 0 ? (
+        <ul>
+          {favoriteRecipes.map((recipe) => (
+            <li key={recipe.id}>
+              <Link to={`/recipe/${recipe.id}`}>
+                {recipe.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No favorites added yet.</p>
+      )}
     </div>
   );
 }
