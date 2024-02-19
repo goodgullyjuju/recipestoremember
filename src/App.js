@@ -1,16 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Note the change here from 'Switch' to 'Routes'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ContentView from './components/ContentView';
-// Remove this line if RecipeList is not used in App.js
-// import RecipeList from './components/RecipeList';
 import Favorites from './components/Favorites';
 import ShoppingList from './components/ShoppingList';
 import RecipeDetail from './components/RecipeDetail';
+
 function App() {
   return (
     <Router>
       <div>
-        {/* Navigation bar */}
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
@@ -18,14 +16,13 @@ function App() {
             <li><Link to="/shopping-list">Shopping List</Link></li>
           </ul>
         </nav>
-      
-        {/* Update to Routes from Switch for react-router-dom v6 */}
+
         <Routes>
-          <Route path="/" element={<ContentView />} exact />
+          <Route path="/" element={<ContentView />} />
           <Route path="/recipe/:id" element={<RecipeDetail />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/shopping-list" element={<ShoppingList />} />
-          {/* Additional routes as needed */}
+          {/* Consider adding additional routes here if you have more components to route to */}
         </Routes>
       </div>
     </Router>

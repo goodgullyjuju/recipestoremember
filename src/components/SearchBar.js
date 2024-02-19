@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
-import './SearchBar.css'; // Import the CSS file
+import SearchBar from './SearchBar';
+import sampleRecipes from './sampleRecipes';
+import RecipeList from './RecipeList'; // Assuming RecipeList displays the recipes
 
-function SearchBar({ onSearch }) {
-  const [query, setQuery] = useState('');
+function ContentView() {
+  const [searchResults, setSearchResults] = useState(sampleRecipes);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSearch(query);
+  const handleSearch = (query) => {
+    if (!query) {
+      setSearchResults(sampleRecipes); // Reset to show all recipes if search is cleared
+      return;
+    }
+    const filteredResults = sampleRecipes.filter((recipe) =>
+      recipe.name.toLowerCase().includes(query.toLowerCase()) ||
+      recipe.description.toLowerCase().includes(query.toLowerCase())
+    );
+    setSearchResults(filteredResults);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search-form">
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search for recipes..."
-        className="search-input"
-      />
-      <button type="submit" className="search-button">Search</button>
-    </form>
+    <div>
+      <SearchBar onSearch={handleSearch} />
+      <RecipeList recipes={searchResults} /> {/* Pass filtered results to RecipeList */}
+    </div>
   );
 }
 
-export default SearchBar;
+export default ContentView;
