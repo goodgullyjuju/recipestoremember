@@ -4,6 +4,7 @@ import ContentView from './ContentView';
 import Favorites from './Favorites';
 import ShoppingList from './ShoppingList';
 import RecipeDetail from './RecipeDetail';
+import sampleRecipes from './sampleRecipes';
 
 function App() {
   return (
