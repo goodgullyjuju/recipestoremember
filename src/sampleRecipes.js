@@ -292,7 +292,7 @@ imageUrl:'/images/BakedSalmonDinner.png',
 ],
 	imageUrl:'/images/DadsSundaySmokedChicken.png',
 
-	videoUrl:"https://youtube/embed/eI-StBeJ0jE",
+	videoUrl:"https://youtube.com/embed/eI-StBeJ0jE",
 	
 },
 
