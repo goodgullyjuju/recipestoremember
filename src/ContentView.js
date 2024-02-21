@@ -1,9 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import sampleRecipes from './sampleRecipes'; // Update if necessary
-import './ContentView.css'; // No change needed if CSS file moved with JS file
+import sampleRecipes from './sampleRecipes'; // Ensure this path is correct if necessary
+import './ContentView.css';
 
 function ContentView() {
+  // Function to toggle favorite status
+  const toggleFavorite = (id) => {
+    let currentFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (currentFavorites.includes(id)) {
+      currentFavorites = currentFavorites.filter(favId => favId !== id);
+    } else {
+      currentFavorites.push(id);
+    }
+    localStorage.setItem('favorites', JSON.stringify(currentFavorites));
+    // Trigger re-render. Consider using a more efficient method in a real app
+    window.location.reload();
+  };
+
+  // Check if a recipe is a favorite
+  const isFavorite = (id) => {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    return favorites.includes(id);
+  };
+
   return (
     <div className="content-view">
       <header className="header">
@@ -20,15 +39,17 @@ function ContentView() {
       <section className="featured-recipes">
         <h2>Featured Recipes</h2>
         <div className="recipes-container">
-        {sampleRecipes.map((recipe, index) => (
-  <article className="recipe" key={index}>
-    <img src={recipe.imageUrl} alt={recipe.name} className="recipe-image"/>
-    <h3>{recipe.name}</h3>
-    <p>{recipe.description}</p>
-    <Link to={`/recipe/${recipe.id}`}>Read more</Link>
-  </article>
-))}
-
+          {sampleRecipes.map((recipe) => (
+            <article className="recipe" key={recipe.id}>
+              <img src={recipe.imageUrl} alt={recipe.name} className="recipe-image"/>
+              <h3>{recipe.name}</h3>
+              <p>{recipe.description}</p>
+              <button onClick={() => toggleFavorite(recipe.id)} className="favorite-button">
+                {isFavorite(recipe.id) ? '♥' : '♡'}
+              </button>
+              <Link to={`/recipe/${recipe.id}`}>Read more</Link>
+            </article>
+          ))}
         </div>
       </section>
       <aside className="search-section">
