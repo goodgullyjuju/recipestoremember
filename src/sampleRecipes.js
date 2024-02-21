@@ -1,6 +1,6 @@
 const sampleRecipes = [
   {
-    id: 1,
+	id:9, 
     name: "MomsPizza",
     description: "A homemade pizza with a secret family recipe. (Makes 1 pizza)",
     ingredients: [
@@ -42,7 +42,7 @@ const sampleRecipes = [
     videoUrl: "https://www.youtube.com/embed/t0H_0d7QBs8" // Converted to embed format
   },
   {
-	id: 2,
+	id: 6,	
     name: "MomsChocolateChipCookies",
     description: "Delicious chocolate cookies with pecans. (Makes about 3 dozen cookies depending on individual size)",
     ingredients: [
@@ -74,7 +74,7 @@ const sampleRecipes = [
     videoUrl: "https://www.youtube.com/embed/4WieSJK5q7w" // Converted to embed format
   },
 {
-id: 3,
+	id: 3,
     name: "Soft Pretzels Using Sourdough Discard",
     description: "We make buttery soft pretzels using sourdough discard on Valentine’s Day 2023.  (Makes 8 soft pretzels)",
     ingredients: [
@@ -166,7 +166,7 @@ steps: [
     videoUrl: "https://youtube.com/embed/-7O_Up-Wc84", // Correct syntax
   },
   {
-    id: 6,
+    id: 1,
     name: "Burger Pizza",
 	description:"We make a pizza from scratch topped with lean grass-fed ground beef seasoned with Italian herbs and spices. (Makes 2 pizzas)",
 
@@ -269,7 +269,7 @@ imageUrl:'/images/BakedSalmonDinner.png',
     videoUrl: "https://youtube.com/embed/hgOAWML--pQ", // Correct syntax
 },
 {
-	id:9,
+	id: 2,
 	name:"DadsSundaySmokedChicken",
 	description:"Bob smokes two whole chickens on a Sunday like boss! He dances! He sings! He even has theme music from the WWE! Come one, Come all! Dad's Sunday Smoked Chicken will make you smile and laugh ... and cry because you wish you could have some too! So Good!",
 	ingredients: [
