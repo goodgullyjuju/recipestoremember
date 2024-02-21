@@ -267,6 +267,35 @@ steps: [
  ],
 imageUrl:'/images/BakedSalmonDinner.png',
     videoUrl: "https://youtube.com/embed/hgOAWML--pQ", // Correct syntax
-  }];
+},
+{
+	id:9,
+	name:"DadsSundaySmokedChicken",
+	description:"Bob smokes two whole chickens on a Sunday like boss! He dances! He sings! He even has theme music from the WWE! Come one, Come all! Dad's Sunday Smoked Chicken will make you smile and laugh ... and cry because you wish you could have some too! So Good!",
+
+	ingredients: [
+	"2 whole organic chickens",
+	"Extra Large Aluminum Foil tray",
+	"Traeger Chicken Rub with Citrus and Black Pepper",
+	"Traeger Pork and Poultry Rub with Apple and Honey",
+],
+	steps: [
+	"Preheat Smoker to 300 degrees",
+	"Place chickens in extra large Aluminum Foil tray",
+	"Cover each with a Traeger rub and then rub spices into chickens",
+	"Place in preheated smoker with breasts up",
+	"Let smoke for 4 hours or until they reach internal temperature of 195 degrees",
+	"Remove from smoker and cover with foil",
+	"Let rest for 15 minutes",
+	"Carve and Serve",
+	"Enjoy!",
+],
+	imageUrl:'/images/DadsSundaySmokedChicken.png',
+
+	videoUrl:"https://youtube/embed/eI-StBeJ0jE",
+	
+},
+
+];
 
   export default sampleRecipes;
