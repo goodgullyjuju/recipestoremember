@@ -17,6 +17,16 @@ function ContentView() {
     window.location.reload();
   };
 
+  // Function to handle printing
+  const handlePrint = (recipeId) => {
+    const printableArea = document.getElementById(`printable-${recipeId}`);
+    const originalContents = document.body.innerHTML;
+    
+    document.body.innerHTML = printableArea.innerHTML;
+    window.print();
+    document.body.innerHTML = originalContents;
+  };
+
   // Check if a recipe is a favorite
   const isFavorite = (id) => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -40,13 +50,16 @@ function ContentView() {
         <h2>Featured Recipes</h2>
         <div className="recipes-container">
           {sampleRecipes.map((recipe) => (
-            <article className="recipe" key={recipe.id}>
+            <article className="recipe" key={recipe.id} id={`printable-${recipe.id}`}>
               <img src={recipe.imageUrl} alt={recipe.name} className="recipe-image"/>
               <h3>{recipe.name}</h3>
               <p>{recipe.description}</p>
-              <button onClick={() => toggleFavorite(recipe.id)} className="favorite-button">
-                {isFavorite(recipe.id) ? '♥' : '♡'}
-              </button>
+              <div className="recipe-actions">
+                <button onClick={() => toggleFavorite(recipe.id)} className="favorite-button">
+                  {isFavorite(recipe.id) ? '♥' : '♡'}
+                </button>
+                <button onClick={() => handlePrint(recipe.id)} className="print-button">Print</button>
+              </div>
               <Link to={`/recipe/${recipe.id}`}>Read more</Link>
             </article>
           ))}

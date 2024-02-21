@@ -1,26 +1,61 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import sampleRecipes from './sampleRecipes'; // Ensure the import path is correct
+import sampleRecipes from './sampleRecipes';
 
 function RecipeDetail() {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
 
   useEffect(() => {
-    console.log('ID:', id); // Debugging: Log the ID to ensure it's correct
     const recipeDetail = sampleRecipes.find(recipe => recipe.id.toString() === id);
-    console.log('Recipe Detail:', recipeDetail); // Debugging: Log the found recipe detail
-    
-    if (recipeDetail) {
-      setRecipe(recipeDetail);
-    } else {
-      console.error('Recipe not found for ID:', id);
-      // Optional: Set some state to show a not-found message to the user
-    }
+    setRecipe(recipeDetail);
   }, [id]);
 
+  const createPrintableContent = (recipe) => {
+    if (!recipe) return '';
+
+    let ingredientsList = '';
+    if (recipe.ingredients) {
+      ingredientsList = recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('');
+    }
+
+    let stepsList = '';
+    if (recipe.steps) {
+      stepsList = recipe.steps.map(step => `<li>${step}</li>`).join('');
+    }
+
+    return `
+      <html>
+      <head>
+        <title>Print Recipe</title>
+      </head>
+      <body>
+        <h1>${recipe.name}</h1>
+        <img src="${recipe.imageUrl}" alt="${recipe.name}" style="max-width:100%;"/>
+        <p>${recipe.description}</p>
+        <h2>Ingredients:</h2>
+        <ul>${ingredientsList}</ul>
+        <h2>Steps:</h2>
+        <ol>${stepsList}</ol>
+      </body>
+      </html>
+    `;
+  };
+
+  const handlePrint = () => {
+    if (recipe) {
+      const printableContent = createPrintableContent(recipe);
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(printableContent);
+      printWindow.document.close();
+      printWindow.focus();
+      printWindow.print();
+      printWindow.close();
+    }
+  };
+
   if (!recipe) {
-    return <div>Loading or recipe not found...</div>;
+    return <div>Loading...</div>;
   }
 
   return (
@@ -64,6 +99,7 @@ function RecipeDetail() {
           ></iframe>
         </div>
       )}
+      <button onClick={handlePrint}>Print</button>
     </div>
   );
 }
