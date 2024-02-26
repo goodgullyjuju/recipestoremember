@@ -99,7 +99,7 @@ const sampleRecipes = [
 		  "Unwrap and cut against the grain. Can be served as is or with BBQ sauce or gravy.",
 		  "Enjoy!",
 		],
-		imageUrl: "/images/DadsSundaySmokedBeefBrisket.png",
+		imageUrl: process.env.PUBLIC_URL + '/images/DadsSundaySmokedBeefBrisket.png',
 		videoUrl: "https://youtube.com/embed/ngGM-_GqIEI",
 	  },
 	  {
