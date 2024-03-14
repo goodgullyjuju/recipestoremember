@@ -416,7 +416,7 @@ const sampleRecipes = [
 		  "Enjoy!"
 		],
 		imageUrl: "/images/BeefandBroccoli.png",
-		
+		videoUrl: "https://youtube.com/embed/pNJ0x0-hAMw",	
 	  }
 	
 	  // Additional entries...
